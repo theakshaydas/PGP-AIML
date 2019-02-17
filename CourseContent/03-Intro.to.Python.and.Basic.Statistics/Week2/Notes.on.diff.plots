@@ -1,0 +1,31 @@
+Seaborn:
+Distribution plots:
+distplot(one_numerical_col, kde=False, rug=True)
+jointplot(one_numerical_col, another_numeric_col, kind=resid|kde|hex|scatter|reg)
+pairplot(dataset, hue=any_categorical_col, palette=) # All continous cols into consideration, categorical cols are ignored
+pairplot(dataset[numerical_cols_array], hue=any_categorical_col, palette=)
+rugplot(one_col)
+kdeplot(one_col)
+
+Categorical plots:
+barplot(x=one_categorical_col, y=another_numeric_col, data=dataset, estimator=aggr_func)
+countplot(x=one_categorical_col, data=dataset, hue=another_col)
+boxplot(x=one_col, y=another_col, data=dataset, hue=another_col, palette=)
+boxplot(data=dataset) # can be determined for entire dataset
+violinplot(x=one_col, y=another_col, data=dataset, hue=another_col, palette=)
+violinplot(data=dataset) # can be determined for entire dataset
+stripplot(x=one_categorical_col, y=another_numeric_col, data=dataset,jitter=True,hue=another_col,palette=)
+swarmplot(x=one_categorical_col, y=another_numeric_col,hue=another_col,data=dataset, palette=, split=True)
+factorplot(x=one_categorical_col,y=another_col,data=dataset,kind='point|bar|box|count|violin|strip')
+
+matrix plots:
+heatmap(dataset.pivot_table() OR dataset.corr(), cmap=, linecolor=, linewidth=)
+clustermap(dataset.pivot_table() OR dataset.corr(), cmap=, standard_scale=)
+
+Grids:
+FacetGrid
+PairGrid
+
+Regression plots:
+lmplot(x=one_numerical_col, y=another_numeric_col, data=dataset, hue=one_categorical_col, row=one_categorical_col, col=one_categorical_col)
+
