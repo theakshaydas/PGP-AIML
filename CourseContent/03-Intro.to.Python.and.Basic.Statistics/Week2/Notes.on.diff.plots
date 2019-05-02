@@ -28,4 +28,3 @@ PairGrid
 
 Regression plots:
 lmplot(x=one_numerical_col, y=another_numeric_col, data=dataset, hue=one_categorical_col, row=one_categorical_col, col=one_categorical_col)
-
